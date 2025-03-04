@@ -10,43 +10,13 @@ import schedule
 import time
 from datetime import datetime
 
-# Configuration
+Configuration
 REPO_PATH = "/path/to/your/repository"  # Change this to your repo's path
 COMMIT_MESSAGE = "Daily automated commit"
 GITHUB_USERNAME = "your_github_username"
 GITHUB_TOKEN = "your_github_personal_access_token"
 
-def make_commit():
-    try:
-        os.chdir(REPO_PATH)
-        
-        # Create or update a file to make a meaningful commit
-        with open("daily_update.txt", "a") as file:
-            file.write(f"Commit made on {datetime.now()}\n")
-        
-        # Git commands
-        subprocess.run(["git", "add", "."], check=True)
-        subprocess.run(["git", "commit", "-m", COMMIT_MESSAGE], check=True)
-        
-        # Push to GitHub
-        subprocess.run(
-            ["git", "push", f"https://{GITHUB_USERNAME}:{GITHUB_TOKEN}@github.com/{GITHUB_USERNAME}/your-repository.git", "main"],
-            check=True
-        )
-        print("Commit and push completed successfully!")
-    except Exception as e:
-        print(f"An error occurred: {e}")
-
-# Schedule the task
-schedule.every().day.at("10:00").do(make_commit)  # Change time as needed
-
-print("Automated commit script is running...")
-while True:
-    schedule.run_pending()
-    time.sleep(1)
-
-Steps to Use the Script
-Set Up a GitHub Personal Access Token:
+SEE MAIN.PY
 
 Go to your GitHub account settings.
 Navigate to "Developer settings" → "Personal Access Tokens" → "Tokens (classic)".
