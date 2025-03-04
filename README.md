@@ -1,6 +1,6 @@
 # BULLSHIT_CONTRIBUTION_CHART (vibe coding)
 
-can you write a script that commits to github everyday auto(mathe)matically?
+can you write a script that commits to github everyday automatically?
 ChatGPT said:
 Certainly! Below is a simple Python script that automatically makes a commit to a GitHub repository every day. It uses the schedule library to schedule the task, and it requires you to set up a GitHub Personal Access Token to authenticate.
 
