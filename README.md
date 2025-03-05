@@ -1,4 +1,4 @@
-# BULLSHIT_CONTRIBUTION_CHART (vibe coding)
+# BULLSHIT_CONTRIBUTION_CHART (vibe coding 🤙)
 
 can you write a script that commits to github everyday automatically?
 ChatGPT said:
